@@ -1,6 +1,11 @@
-const age = prompt("Favor digite sua idade");
+let price = parseFloat(prompt("Insira o preço do produto: "));
 
-const yearOfBirth = new Date().getFullYear() - age;
+let age = parseInt(prompt("Digite sua idade:"));
 
-console.log(`Com base na sua idade, você nasceu em ${yearOfBirth}.`);
-
+if (age < 18) {
+  let discount = price * 0.1;
+  let finalPrice = price - discount;
+  console.log("O preço final é: " + finalPrice);
+} else {
+  console.log("O preço final é: " + price);
+}

@@ -1,5 +1,11 @@
-const radius = parseFloat(prompt("Insira o raio de um circulo"))
+let sideA = parseFloat(prompt("Digite o comprimento do lado A: "));
+let sideB = parseFloat(prompt("Digite o comprimento do lado B: "));
+let sideC = parseFloat(prompt("Digite o comprimento do lado C: "));
 
-const area = Math.PI * Math.pow (radius,2);
-
-console.log (`A área de um círculo com raio ${radius} é ${ area.toFixed(2)}.`)
+if (sideA === sideB && sideB === sideC) {
+  console.log("O triângulo é equilateral.");
+} else if (sideA === sideB || sideA === sideC || sideB === sideC) {
+  console.log("O triângulo é isosceles.");
+} else {
+  console.log("O triângulo é scalene.");
+}
