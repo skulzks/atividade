@@ -1,11 +1,14 @@
-let sideA = parseFloat(prompt("Digite o comprimento do lado A: "));
-let sideB = parseFloat(prompt("Digite o comprimento do lado B: "));
-let sideC = parseFloat(prompt("Digite o comprimento do lado C: "));
 
-if (sideA === sideB && sideB === sideC) {
-  console.log("O triângulo é equilateral.");
-} else if (sideA === sideB || sideA === sideC || sideB === sideC) {
-  console.log("O triângulo é isosceles.");
-} else {
-  console.log("O triângulo é scalene.");
+let sum = 0;
+
+while (true) {
+const number = parseInt(prompt("Digite um número (ou 0 para parar): "));
+
+  if (number === 0) {
+    break;
+  }
+
+  sum += number;
 }
+
+console.log(`A soma dos números é: ${sum}`);

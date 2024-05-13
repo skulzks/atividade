@@ -1,11 +1,20 @@
-let price = parseFloat(prompt("Insira o preço do produto: "));
+let sum = 0;
+let count = 0;
 
-let age = parseInt(prompt("Digite sua idade:"));
+while (true) {
+  const grade = parseFloat(prompt("Insira uma nota (ou 0 para parar: "));
 
-if (age < 18) {
-  let discount = price * 0.1;
-  let finalPrice = price - discount;
-  console.log("O preço final é: " + finalPrice);
+  if (grade === 0) {
+    break;
+  }
+
+  sum += grade;
+  count++;
+}
+
+if (count === 0) {
+  console.log("Nenhuma nota foi inserida.");
 } else {
-  console.log("O preço final é: " + price);
+  const average = sum / count;
+  console.log(`A nota média é: ${average}`);
 }

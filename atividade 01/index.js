@@ -1,7 +1,23 @@
-const number = parseInt(prompt("Insira um número:"));
+let totalStudents = parseInt(prompt("Digite o número total de alunos: "));
+let sum = 0;
+let highestGrade = -Infinity;
+let lowestGrade = Infinity;
 
-if (number > 0 && number % 2 === 0) {
-  console.log(`O número ${number} é positivo.`);
-} else {
-  console.log(`O número ${number} Não e positivo.`);
+for (let i = 0; i < totalStudents; i++) {
+  let grade = parseFloat(prompt(`Insira a nota do aluno ${i + 1}: `));
+  sum += grade;
+  if (grade > highestGrade) {
+    highestGrade = grade;
+  }
+  if (grade < lowestGrade) {
+    lowestGrade = grade;
+  }
 }
+
+let averageGrade = sum / totalStudents;
+
+console.log(`nota media: ${averageGrade}`);
+console.log(`nota alta: ${highestGrade}`);
+console.log(`nota baixa: ${lowestGrade}`);
+
+
