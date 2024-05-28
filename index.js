@@ -1,10 +1,34 @@
-let n1 = 8;
-let n2 = 9;
-let n3 = 7;
-let p1 = 2;
-let p2 = 3;
-let p3 = 5;
+let telefone, local, mora, devia, jatrabalhou;
+let array = [telefone, local, mora, devia, jatrabalhou];
 
-let media = (n1 * p1 + n2 * p2 + n3 * p3) / (p1 + p2 + p3);
+telefone = prompt('Telefonou para a vítima?');
+local = prompt('Esteve no local do crime?');
+mora = prompt('Mora perto da vítima?');
+devia = prompt('Devia para a vítima?');
+jatrabalhou = prompt('Já trabalhou com a vítima?');
 
-console.log("A média é:", media);
+let contador = 0;
+
+for (item of array) {
+  if (item === 'S') {
+    contador += 1;
+  }
+}
+
+if (contador === 5) {
+  console.log("Assassino");
+} else if (contador >= 3 && contador <= 4) {
+  console.log('Cúmplice');
+} else if (contador === 2) {
+  console.log('Suspeito');
+} else {
+  console.log('Inocente');
+}
+
+
+
+
+
+
+
+
